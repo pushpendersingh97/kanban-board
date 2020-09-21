@@ -7,7 +7,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Summary</mat-label>
-        <input matInput placeholder="Summary" />
+        <input matInput placeholder="Summary" #summaryInput/>
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
     </p>
@@ -19,7 +19,7 @@
       </mat-form-field>
     </p>
     <p>
-        <button mat-stroked-button color="primary">Add</button>
+        <button mat-stroked-button color="primary" (click)="addNewTicket()">Add</button>
     </p>
   </mat-card-content>
 </mat-card>

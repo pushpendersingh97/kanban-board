@@ -1,3 +1,4 @@
+import { TicketState } from './../services/ticket-state.service';
 import { Column } from './../models/column.model';
 import { Board } from './../models/board.model';
 import { Component, OnInit } from '@angular/core';
@@ -13,19 +14,15 @@ import {
   styleUrls: ['./main-view.component.scss'],
 })
 export class MainViewComponent implements OnInit {
-  
-  todo = ['Get to work', 'Fall asleep'];
-  inProgress = ['Get up', 'Develop'];
-  done = ['Check e-mail', 'Walk dog'];
 
   board: Board = new Board('test Board',
   [
-     new Column('todo', this.todo),
-     new Column('inProgress', this.inProgress),
-     new Column('done', this.done),
+     new Column('todo', this.ticketState.getTodo()),
+     new Column('inProgress', this.ticketState.getInProgress()),
+     new Column('done', this.ticketState.getDone()),
   ]);
 
-  constructor() {}
+  constructor(private ticketState: TicketState) {}
 
   ngOnInit(): void {}
 

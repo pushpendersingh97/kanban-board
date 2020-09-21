@@ -1,3 +1,4 @@
+import { TicketState } from './services/ticket-state.service';
 import { AppRoutingModule } from './app-routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,7 +27,7 @@ import { NewTicketComponent } from './new-ticket/new-ticket.component';
     CommonModule,
     AngularMaterialModule
   ],
-  providers: [],
+  providers: [TicketState],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

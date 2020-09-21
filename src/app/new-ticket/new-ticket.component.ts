@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TicketState } from './../services/ticket-state.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-new-ticket',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-ticket.component.scss']
 })
 export class NewTicketComponent implements OnInit {
-
-  constructor() { }
+  @ViewChild('summaryInput', { static: true }) summaryInputRef: ElementRef;
+  
+  constructor(private ticketState: TicketState) { }
 
   ngOnInit(): void {
+  }
+
+  addNewTicket(){
+    this.ticketState.addNewTicket(this.summaryInputRef.nativeElement.value);
   }
 
 }
