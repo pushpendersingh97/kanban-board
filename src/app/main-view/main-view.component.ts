@@ -1,5 +1,5 @@
-import { Column } from './../../models/column.model';
-import { Board } from './../../models/board.model';
+import { Column } from './../models/column.model';
+import { Board } from './../models/board.model';
 import { Component, OnInit } from '@angular/core';
 import {
   CdkDragDrop,

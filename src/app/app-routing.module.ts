@@ -1,4 +1,4 @@
-import { MainViewComponent } from './pages/main-view/main-view.component';
+import { MainViewComponent } from './main-view/main-view.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
