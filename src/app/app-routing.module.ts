@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: MainViewComponent}
+  {path: '', redirectTo: '/mainView', pathMatch: 'full'},
+  {path: 'mainView', component: MainViewComponent},
 ];
 
 @NgModule({
