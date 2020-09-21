@@ -14,9 +14,9 @@ import {
 })
 export class MainViewComponent implements OnInit {
   
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-  inProgress = ['Get up', 'Brush teeth'];
-  done = ['Take a shower', 'Check e-mail', 'Walk dog'];
+  todo = ['Get to work', 'Fall asleep'];
+  inProgress = ['Get up', 'Develop'];
+  done = ['Check e-mail', 'Walk dog'];
 
   board: Board = new Board('test Board',
   [
