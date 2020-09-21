@@ -6,7 +6,11 @@
     background-color: white;
     margin-bottom: 1rem;
     padding: 1rem;
-
-    font-weight: 900;
-    font-size: large;
+    
+    .header-title{
+        font-weight: 900;
+        font-size: large;
+        cursor: pointer;
+    }
+    
 }
