@@ -1,0 +1,14 @@
+// Varibales 
+$font-family-roboto: "Roboto, "Helvetica Neue", sans-serif";
+
+// Main Style
+
+html, body { height: 100%; }
+body { margin: 0; font-family: $font-family-roboto }
+
+html,body {
+    background-image: url("./assets/background.svg");
+    background-size: cover;
+
+    overflow-y: auto;
+}
