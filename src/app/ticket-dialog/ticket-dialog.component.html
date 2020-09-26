@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+
+<div mat-dialog-content>
+    <mat-card class="new-ticket-card">
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+        </mat-card-header>
+      
+        <mat-card-content>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Summary</mat-label>
+              <input matInput placeholder="Summary" #summaryInput/>
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Assignee</mat-label>
+              <input matInput placeholder="Assignee" />
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+          </p>
+          <p>
+              
+          </p>
+        </mat-card-content>
+      </mat-card>
+      
+  </div>
+
+<div mat-dialog-actions>
+    <button mat-stroked-button color="primary" (click)="addNewTicket()">Add</button>
+    <button mat-button (click)="onNoClick()">Close</button>
+
+</div>

@@ -3,21 +3,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { AngularMaterialModule } from './angular-material.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainViewComponent } from './main-view/main-view.component';
-import { CommonModule } from '@angular/common';
+
 import { HeaderComponent } from './header/header.component';
-import { NewTicketComponent } from './new-ticket/new-ticket.component';
+import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
     HeaderComponent,
-    NewTicketComponent
+    TicketDialogComponent
   ],
   imports: [
     BrowserModule,
