@@ -21,7 +21,7 @@ export class TicketDialogComponent implements OnInit {
     }
 
     onNoClick(): void {
-    this.dialogRef.close();
+      this.dialogRef.close();
     }
 
     addNewTicket(){

@@ -11,6 +11,7 @@
         >
           <div class="tasks" *ngFor="let item of column.tasks" cdkDrag>
             {{ item }}
+            <i class="material-icons md-18" (click)="editTicket()">create</i>
           </div>
         </div>
       </div>

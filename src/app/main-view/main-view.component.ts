@@ -7,6 +7,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { MatDialog } from '@angular/material/dialog';
+import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 
 @Component({
   selector: 'app-main-view',
@@ -22,7 +24,7 @@ export class MainViewComponent implements OnInit {
      new Column('done', this.ticketState.getDone()),
   ]);
 
-  constructor(private ticketState: TicketState) {}
+  constructor(private ticketState: TicketState, public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
@@ -41,5 +43,16 @@ export class MainViewComponent implements OnInit {
         event.currentIndex
       );
     }
+  }
+
+  editTicket() {
+    const dialogRef = this.dialog.open(TicketDialogComponent, {
+      width: '400px',
+      data: {title: "Edit Ticket"}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }
