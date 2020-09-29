@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainViewComponent } from './main-view/main-view.component';
 
-import { HeaderComponent } from './header/header.component';
+import { DialogEntryComponent, HeaderComponent } from './header/header.component';
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
     AppComponent,
     MainViewComponent,
     HeaderComponent,
-    TicketDialogComponent
+    TicketDialogComponent,
+    DialogEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +30,6 @@ import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
     AngularMaterialModule
   ],
   providers: [TicketState],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 
 @Component({
@@ -13,16 +14,24 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  newTicket(): void {
-    const dialogRef = this.dialog.open(TicketDialogComponent, {
-      width: '400px',
-      data: {title: "Create a new Ticket"}
-    });
+}
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+
+@Component({
+  template: ''
+})
+export class DialogEntryComponent {
+
+  constructor(public dialog: MatDialog, private router: Router,
+    private route: ActivatedRoute) {
+    this.openDialog();
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(TicketDialogComponent,{});
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.router.navigate(['../'], { relativeTo: this.route });
+    });
+  }
 }

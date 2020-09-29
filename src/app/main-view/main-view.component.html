@@ -1,3 +1,7 @@
+<div class="app-header">
+  <app-header></app-header>
+</div>
+
 <div class="board">
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
@@ -11,7 +15,7 @@
         >
           <div class="tasks" *ngFor="let item of column.tasks" cdkDrag>
             {{ item }}
-            <i class="material-icons md-18" (click)="editTicket()">create</i>
+            <i class="material-icons md-18" routerLink="editTicket" [queryParams]="{dialog: 'edit'}">create</i>
           </div>
         </div>
       </div>

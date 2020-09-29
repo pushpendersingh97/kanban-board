@@ -2,6 +2,7 @@
   <div class="header-title" routerLink="./mainView">Kanban Board</div>
 
   <div class="nav-btn-wrapper">
-    <button mat-flat-button color="primary" id="openDialog" (click)="newTicket()">New Ticket</button>
+    <button mat-flat-button color="primary" routerLink="newTicket" [queryParams]="{dialog: 'new'}">New Ticket</button>
   </div>
 </div>
+<router-outlet></router-outlet>
