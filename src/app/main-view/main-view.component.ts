@@ -16,20 +16,23 @@ import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component'
   styleUrls: ['./main-view.component.scss'],
 })
 export class MainViewComponent implements OnInit {
+  board: Board
+  // new Board('test Board',
+  // [
+  //    new Column('todo', this.ticketState.getTodo()),
+  //    new Column('inProgress', this.ticketState.getInProgress()),
+  //    new Column('done', this.ticketState.getDone()),
+  // ]);
 
-  board: Board = new Board('test Board',
-  [
-     new Column('todo', this.ticketState.getTodo()),
-     new Column('inProgress', this.ticketState.getInProgress()),
-     new Column('done', this.ticketState.getDone()),
-  ]);
-
-  constructor(private ticketState: TicketState, public dialog: MatDialog) {}
+  constructor(private ticketState: TicketState, public dialog: MatDialog) {
+    this.board = this.ticketState.boardData;
+  }
 
   ngOnInit(): void {}
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
+
       moveItemInArray(
         event.container.data,
         event.previousIndex,
@@ -45,14 +48,13 @@ export class MainViewComponent implements OnInit {
     }
   }
 
-  editTicket() {
-    const dialogRef = this.dialog.open(TicketDialogComponent, {
-      width: '400px',
-      data: {title: "Edit Ticket"}
-    });
+  // editTicket() {
+  //   const dialogRef = this.dialog.open(TicketDialogComponent, {
+      
+  //   });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //   });
+  // }
 }

@@ -14,6 +14,7 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { DialogEntryComponent, HeaderComponent } from './header/header.component';
 
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
     CommonModule,
     AngularMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [TicketState],
   bootstrap: [AppComponent],

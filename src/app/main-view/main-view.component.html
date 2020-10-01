@@ -5,17 +5,32 @@
 <div class="board">
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
-      <div class="board-column" *ngFor="let column of board.column">
-        <div class="column-title">{{ column.name }}</div>
-        <div
-          class="task-container"
-          cdkDropList
-          [cdkDropListData]="column.tasks"
-          (cdkDropListDropped)="drop($event)"
-        >
-          <div class="tasks" *ngFor="let item of column.tasks" cdkDrag>
-            {{ item }}
-            <i class="material-icons md-18" routerLink="editTicket" [queryParams]="{dialog: 'edit'}">create</i>
+      <div
+        class="board-outer-column"
+        *ngFor="let column of board.column; let board_no = index"
+      >
+        <div class="board-column" id="{{column.name}}_{{board_no}}">
+          <div class="column-title">{{ column.name }}</div>
+          <div
+            class="task-container"
+            cdkDropList
+            [cdkDropListData]="column.tasks"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="tasks"
+              *ngFor="let item of column.tasks; let i = index"
+              cdkDrag
+            >
+              {{ item }}
+              <i
+                class="material-icons md-18"
+                routerLink="editTicket"
+                [queryParams]="{ dialog: 'edit', task: i, column: column.name }"
+                *ngIf="board_no != (board.column.length-1)"
+                >create</i
+              >
+            </div>
           </div>
         </div>
       </div>
