@@ -31,7 +31,6 @@ export class TicketDialogComponent implements OnInit {
     ) {}
     
     ngOnInit(): void {
-
       // to check whether we are using right param
       this.route.queryParams.subscribe(
         (param: Params) => {
@@ -47,10 +46,11 @@ export class TicketDialogComponent implements OnInit {
         }
       );
 
+      // Set the values
       if(this.editMode){
         this.title = "Update Ticket";
         this.summary = this.ticketStateService.getTaskDetails(this.column, this.editTaskId);
-        console.log(this.summary);
+       // console.log(this.summary);
       }else{
         this.title = "New Ticket";
         this.summary = "";
