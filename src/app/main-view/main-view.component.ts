@@ -48,6 +48,13 @@ export class MainViewComponent implements OnInit {
     }
   }
 
+  onDelete(taskId, columnName){
+    let deleteTask = confirm("Are you sure you want to delete?");
+
+    if(deleteTask){
+      this.ticketState.deleteTicket(taskId, columnName);
+    }
+  }
   // editTicket() {
   //   const dialogRef = this.dialog.open(TicketDialogComponent, {
       

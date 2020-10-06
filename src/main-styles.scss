@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  // margin: 0 2rem;
 
   min-width: 0;
   min-height: 0;
@@ -37,10 +38,12 @@ body {
   .board-wrapper {
     display: flex;
     flex-grow: 1;
+    // width: 100%;
 
     .board-columns {
       display: flex;
       flex-grow: 1;
+      // overflow-x: auto;
 
       .board-column {
         display: flex;

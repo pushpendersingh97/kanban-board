@@ -43,4 +43,9 @@ export class TicketState {
     let columnArray = this.getColumn(columnName);
     columnArray[index] = updateTask;
   }
+
+  deleteTicket(index: number, columnName: string){
+    let columnArray = this.getColumn(columnName);
+    columnArray.splice(index ,1);
+  }
 }

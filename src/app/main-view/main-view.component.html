@@ -23,13 +23,18 @@
               cdkDrag
             >
               {{ item }}
-              <i
-                class="material-icons md-18"
-                routerLink="editTicket"
-                [queryParams]="{ dialog: 'edit', task: i, column: column.name }"
-                *ngIf="board_no != (board.column.length-1)"
-                >create</i
-              >
+              <div>
+                <i
+                  class="material-icons md-18"
+                  routerLink="editTicket"
+                  [queryParams]="{ dialog: 'edit', task: i, column: column.name }"
+                  *ngIf="board_no != (board.column.length-1)"
+                  >create</i
+                >
+                <span class="material-icons md-18" (click)="onDelete(i, column.name)">
+                  delete
+                </span>
+              </div>
             </div>
           </div>
         </div>
