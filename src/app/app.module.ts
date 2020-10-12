@@ -16,6 +16,8 @@ import { DialogEntryComponent, HeaderComponent } from './header/header.component
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TaskListComponent } from './task-list/task-list.component';
+import { AuthComponent } from './auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TaskListComponent } from './task-list/task-list.component';
     HeaderComponent,
     TicketDialogComponent,
     DialogEntryComponent,
-    TaskListComponent
+    TaskListComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { TaskListComponent } from './task-list/task-list.component';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [TicketState],
   bootstrap: [AppComponent],
