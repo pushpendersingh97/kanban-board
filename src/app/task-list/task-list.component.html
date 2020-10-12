@@ -1,0 +1,30 @@
+
+<div class="board-column" id="{{column.name}}_{{board_no}}">
+    <div class="column-title">{{ column.name }}</div>
+    <div
+      class="task-container"
+      cdkDropList
+      [cdkDropListData]="column.tasks"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        class="tasks"
+        *ngFor="let item of column.tasks; let i = index"
+        cdkDrag
+      >
+        {{ item }}
+        <div>
+          <i
+            class="material-icons md-18"
+            routerLink="editTicket"
+            [queryParams]="{ dialog: 'edit', task: i, column: column.name }"
+            *ngIf="board_no != (board.column.length-1)"
+            >create</i
+          >
+          <span class="material-icons md-18" (click)="onDelete(i, column.name)">
+            delete
+          </span>
+        </div>
+      </div>
+    </div>
+  </div> 

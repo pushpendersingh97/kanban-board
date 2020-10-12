@@ -15,6 +15,7 @@ import { DialogEntryComponent, HeaderComponent } from './header/header.component
 
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { TaskListComponent } from './task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MainViewComponent,
     HeaderComponent,
     TicketDialogComponent,
-    DialogEntryComponent
+    DialogEntryComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
