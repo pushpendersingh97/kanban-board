@@ -5,7 +5,6 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { MatDialog } from '@angular/material/dialog';
 import { TicketState } from '../services/ticket-state.service';
 import { Board } from '../models/board.model';
 
@@ -16,7 +15,7 @@ import { Board } from '../models/board.model';
 })
 export class TaskListComponent implements OnInit {
   @Input() column: Column;
-  @Input() board_no: number;
+  @Input() boardNo: number;
   board: Board;
 
   constructor(private ticketState: TicketState) {

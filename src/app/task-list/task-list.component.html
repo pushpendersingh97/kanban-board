@@ -1,5 +1,5 @@
 
-<div class="board-column" id="{{column.name}}_{{board_no}}">
+<div class="board-column" id="{{column.name}}_{{boardNo}}">
     <div class="column-title">{{ column.name }}</div>
     <div
       class="task-container"
@@ -18,7 +18,7 @@
             class="material-icons md-18"
             routerLink="editTicket"
             [queryParams]="{ dialog: 'edit', task: i, column: column.name }"
-            *ngIf="board_no != (board.column.length-1)"
+            *ngIf="boardNo != (board.column.length-1)"
             >create</i
           >
           <span class="material-icons md-18" (click)="onDelete(i, column.name)">

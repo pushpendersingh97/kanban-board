@@ -3,7 +3,6 @@ import { Board } from './../models/board.model';
 import { Component, OnInit } from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
-import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 
 @Component({
   selector: 'app-main-view',
