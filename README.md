@@ -2,7 +2,10 @@
 
 Project Link: https://pushpender-kanbanboard.netlify.app/
 
-Status : In Progress
+email: "pushpendersingh311@gmail.com"
+password: "Push@9843"
+
+Status : Hold
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
