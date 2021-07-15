@@ -19,6 +19,8 @@ export class AuthComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    
+    console.log("Try to use: email: pushpendersingh311@gmail.com, password: Push@9843")
     this.loginForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.pattern(this.emailRegx)]],
       password: [null, Validators.required],
